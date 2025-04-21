@@ -1,6 +1,6 @@
 # from math import prod
 # count = 0
-# for lines in open("9.txt"):
+# for lines in open("99.txt"):
 #     a = [int(x) for x in lines.split()]
 #     pov = [x for x in a if a.count(x) >1]
 #     ne_pov = [x for x in a if a.count(x)== 1]
@@ -10,7 +10,7 @@
             
 # print(count)
 # k = 0
-# for line in open('9.txt'):
+# for line in open('99.txt'):
 #     k += 1
 #     a = [int(x) for x in line.split()]
 #     pov = [x for x in a if a.count(x) > 1]
@@ -21,7 +21,7 @@
 #             print(k)
 # from math import *
 # count = 0
-# for line in open("9.txt"):
+# for line in open("99.txt"):
 #     a = [int(x) for x in line.split()]
 #     otr = [x for x in a if x<0]
 #     pol = [x for x in a if x>0]
@@ -35,7 +35,7 @@
 
 # count = 0
 
-# for line in open('9.txt'):
+# for line in open('99.txt'):
 #     a = [int(x) for x in line.split()]
 #     pov = [x for x in a if a.count(x) == 3]
 #     ne_pov = [x for x in a if a.count(x) == 1]
@@ -45,5 +45,4 @@
 #             count += 1
             
 # print(count)
-    
     
