@@ -10,4 +10,3 @@
 #     if sum % 6 == 0:
 #         print(n)
 
-for n in rn
