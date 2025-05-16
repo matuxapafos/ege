@@ -20,7 +20,7 @@
 #     if m == 0:
 #         return 0
 #     h = [f(a+3,b,m-1), f(a,b+3,m-1), f(a*2,b,m-1), f(a,b*2,m-1)]
-#     return any(h) if m % 2 !=0 else any(h)
+#     return any(h) if m % 2 !=0 else all(h)
 #
 # print([s for s in range(1,124) if f(16,s,2)])
 
