@@ -45,4 +45,10 @@
 #             count += 1
             
 # print(count)
+c = 0
+for lines in open('9.txt'):
+    a = [int(x) for x in lines.split()]
+    for i in a:
+        
+
     

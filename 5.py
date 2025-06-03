@@ -46,5 +46,23 @@
 #     if r.count('0') > 2:
 #         print(n)
 
+for n in range(1000,10000):
+    sumc = 0
+    maxn = float('-inf')
+    minn = float('+inf')
+    for i in str(n):
+        maxn = max(int(i), maxn)
+        minn = min(int(i), minn)
+        if int(i) % 2 ==0:
+            sumc += int(i)
+    d = sumc**2
+    c = maxn-minn
+    e = c ** 3
+    if d > e:
+        res = str(e) + str(d)
+    else:
+        res = str(d) + str(e)
+    if res == '4343':
+        print(n)
 
     

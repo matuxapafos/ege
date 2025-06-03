@@ -6,12 +6,12 @@
 #         print(a)
 #         break
 
-# def deli(x,y):
-#     return x % y == 0
-#
-# for a in range(1,10000):
-#     if all((not(deli(x,7) and deli(x,13)) <= (x > a -40)) for x in range(1,10000)):
-#         print(a)
+def deli(x,y):
+    return x % y == 0
+
+for a in range(1,10000):
+    if all((not(deli(x,7) and deli(x,13)) <= (x > a -40)) for x in range(1,10000)):
+        print(a)
 
 # def deli(n,m):
 #     return n%m==0
@@ -33,7 +33,12 @@
 #
 # print(min(a for a in range(1,200) if all(f(x,y,a) for x in range(1,400) for y in range(1,400))))
 
-def f(x,y,a):
-    return (x+y <= 32) or ( y <= x+4) or (y>=a)
+# def f(x,y,a):
+#     return (x+y <= 32) or ( y <= x+4) or (y>=a)
+#
+# print(max(a for a in range(0,500) if all(f(x,y,a) for x in range(0,600) for y in range(0,60))))
 
-print(max(a for a in range(0,500) if all(f(x,y,a) for x in range(0,600) for y in range(0,60))))
+def f(x,y,a):
+    return (2*y + 3*x != 135) or (y > a) or (x > a)
+
+print(max(a for a in range(0,200) if all(f(x,y,a) for x in range(0,400) for y in range(0,400))))

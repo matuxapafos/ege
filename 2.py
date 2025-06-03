@@ -80,18 +80,53 @@ from itertools import *
 #     if all(f(**dict(zip(p,l))) == l[-1] for l in t):
 #         print(*p)
 
+# from itertools import *
+#
+# def f(x,y,z,w):
+#     return (((y and (x == (not(z)))) <= w)) and (z <= y)
+# for x1,x2,x3,x4,x5 in product([0,1], repeat = 5):
+#     t = (
+#         (0,0,x1,x2,0),
+#         (0,x3,0,0,0),
+#         (1,x4,x5,1,0)
+#     )
+#
+#     if len(t) == len(set(t)):
+#         for p in permutations('xyzw', r = 4):
+#             if all(f(**dict(zip(p,l))) == l[-1] for l in t):
+#                 print(*p)
+
+# from itertools import *
+#
+# def f(x,y,z,w):
+#     return ((1==w) == (not((w and x) or y))) <= z
+#
+# for x1,x2,x3,x4,x5,x6,x7,x8,x9,x10 in product([0,1], repeat = 10 ):
+#     t=(
+#         (x1,x2,1,x3,0),
+#         (1,x4,1,x5,0),
+#         (0,1,0,0,1),
+#         (1,x6,1,x7,1),
+#         (x8,x9,1,x10,1)
+#     )
+#     if len(t) == len(set(t)):
+#         for p in permutations('xyzw',r = 4):
+#             if all(f(**dict(zip(p,l))) == l[-1] for l in t):
+#                 print(*p)
+
 from itertools import *
 
 def f(x,y,z,w):
-    return (((y and (x == (not(z)))) <= w)) and (z <= y)
-for x1,x2,x3,x4,x5 in product([0,1], repeat = 5):
-    t = (
-        (0,0,x1,x2,0),
-        (0,x3,0,0,0),
-        (1,x4,x5,1,0)
-    )
+    return (x and y) or ((z == y) and w)
 
+for x1,x2,x3,x4,x5,x6,x7 in product([0,1], repeat = 7 ):
+    t = (
+        (x1,x2,1,1,0),
+        (x3,0,0,x4,0),
+        (x5,0,x6,0,1),
+        (x7,0,0,0,1)
+    )
     if len(t) == len(set(t)):
-        for p in permutations('xyzw', r = 4):
+        for p in permutations('xyzw', r =4):
             if all(f(**dict(zip(p,l))) == l[-1] for l in t):
                 print(*p)
