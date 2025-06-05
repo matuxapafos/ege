@@ -20,3 +20,12 @@
 #     if all(str(p.index(x) + 1) in a[p.index(y)] for x,y in s):
 #         print(*p)
 
+from itertools import *
+
+a = '458 568 567 17 1238 2378 346 1256'.split()
+s = 'fg ge eh hc cf fa ca ad de db bc bh'.split()
+
+print('1 2 3 4 5 6 7 8')
+for p in permutations('fgedbhca'):
+    if all(str(p.index(x) + 1) in a[p.index(y)] for x,y in s):
+        print(*p)

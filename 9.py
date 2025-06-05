@@ -45,10 +45,27 @@
 #             count += 1
             
 # print(count)
-c = 0
+# count = 0
+# for lines in open('9.txt'):
+#     a = [int(x) for x in lines.split()]
+#     pv = [x for x in a if a.count(x) == 3]
+#     np = [x for x in a if a.count(x) == 1]
+#     us1 = len(pv) == 3 and len(np) == 4
+#     us2 = a == sorted(a)
+#     if us1 + us2 <= 1:
+#         count+= 1
+# print(count)
+from math import prod
+count = 0
+
 for lines in open('9.txt'):
     a = [int(x) for x in lines.split()]
-    for i in a:
-        
+    pv = [x for x in a if a.count(x) == 2]
+    np = [x for x in a if a.count(x) == 1]
+    if len(pv) == 4 and len(np) == 3:
+        if prod(pv)/prod(np) > 2:
+            count += 1
+print(count)
+
 
     
