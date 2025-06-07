@@ -74,8 +74,10 @@
 
 from ipaddress import ip_network
 
-net = ip_network('192.168.31.80/255.255.255.240', 0)
-
+net = ip_network('101.157.240.0/255.255.252.0', 0)
+count = 0
 for ip in net:
     b = bin(int(ip))[2:].zfill(32)
-    print(b.count('1'))
+    if b[:16].count('1') > b[-16:].count('1'):
+            count += 1
+print(count)
