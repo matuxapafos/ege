@@ -93,15 +93,106 @@
 #                     ans.append(len(ps))
 # print(max(ans))
 
-s = open('0wGUBUjFW.txt').readline()
+# s = open('0wGUBUjFW.txt').readline()
+#
+# while '++' in s: s = s.replace('++', '+ +')
+# while '+*' in s: s = s.replace('+*', '+ *')
+# while '*+' in s: s = s.replace('*+', '* +')
+# while '**' in s: s = s.replace('**', '* *')
+# mx = float('-inf')
+# for kusok in s.split():
+#     mx = max(mx,len(kusok))
+# print(mx)
 
-while '++' in s: s = s.replace('++', '+ +')
-while '+*' in s: s = s.replace('+*', '+ *')
-while '*+' in s: s = s.replace('*+', '* +')
-while '**' in s: s = s.replace('**', '* *')
+# s = open('kC3I96Zwxx.txt').readline()
+#
+# while '--' in s: s = s.replace('--', '- -')
+# while '-*' in s: s = s.replace('-*', '- *')
+# while '*-' in s: s = s.replace('*-', '* -')
+# while '**' in s: s = s.replace('**', '* *')
+# ans = []
+# for kusok in s.split():
+#     for i in range(len(kusok)-1):
+#         ps = kusok[i]
+#         if ps[0] == 'B' and kusok[i] + kusok[i+1] not in ['B-', 'B*']:
+#             for j in range(i+1,len(kusok)):
+#
+#                 ps += kusok[j]
+#                 if ps[-1] not in '*-' and 'A' not in ps and 'C' not in ps and 'D' not in ps and ps.count('B') == 1:
+#                     ans.append(len(ps))
+# print(max(ans))
+
+# s = open('24.txt').readline()
+# mx = -float('inf')
+# s = s.replace('B','f').replace('D', 'f').replace('C','f').replace('A','a').replace('O','a')
+# count = 0
+# for i in range(0, len(s)-1, 2):
+#     if s[i] == 'f' and s[i+1] == 'a':
+#         count += 1
+#         mx = max(mx, count)
+#     else:
+#         count = 0
+# print(mx)
+
+# s = open('24.txt').readline()
+# while 'QW' in s: s = s.replace('QW', 'Q W')
+#
+# answer = []
+#
+# for kusok in s.split():
+#     answer += [len(kusok)]
+# print(max(answer))
+
+# s = open('24.txt').readline()
+# while 'XX' in s: s =s.replace('XX', 'X X')
+# while 'YY' in s: s =s.replace('YY', 'Y Y')
+# while 'ZZ' in s: s =s.replace('ZZ', 'Z Z')
+# ans = []
+# for kusok in s.split():
+#     ans += [len(kusok)]
+# print(max(ans))
+
+# s = open('24.txt').readline()
+# s =s.replace('1','n').replace('2','c').replace('3','n').replace('4','c').replace('5','n').replace('6','c').replace('7','n').replace('8','c').replace('9','n').replace('0','c')
+#
+# while 'nc' in s: s = s.replace('nc', 'n c')
+# while 'cn' in s: s = s.replace('cn', 'c n')
+#
+# ans = []
+# for kusok in s.split():
+#     ans += [len(kusok)]
+# print(max(ans))
+
+# s = open('24.txt').readline()
+#
+# while 'PR' in s: s = s.replace('PR','P R')
+# while 'RP' in s: s = s.replace('RP','R P')
+# ans = []
+# for kusok in s.split():
+#     ans += [len(kusok)]
+# print(max(ans))
+
+
+# s = open('24.txt').readline()
+# while 'XX' in s: s = s.replace('XX', 'X X')
+# while 'YY' in s: s = s.replace('YY', 'Y Y')
+# ans = []
+# for kusok in s.split():
+#     for i in range(len(kusok) -1):
+#         ps = kusok[i]
+#         for j in range(i+1,len(kusok)):
+#             ps += kusok[j]
+#             if ps.count('X') == 1 and ps.count('Y') == 1:
+#                 ans.append(len(ps))
+# print(max(ans))
+
+s = open('24.txt').readline()
 mx = float('-inf')
-for kusok in s.split():
-    mx = max(mx,len(kusok))
+count = 0
+for i in range(0,len(s) -2,3):
+    if (s[i] == 'N' and s[i+1] == 'P' and s[i+2] =='O') or (s[i] == 'P' and s[i+1] == 'N' and s[i+2] =='O'):
+        count += 1
+        mx = max(mx,count)
+    else:
+        count = 0
 print(mx)
-
-

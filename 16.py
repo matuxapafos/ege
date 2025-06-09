@@ -115,4 +115,8 @@
 # for n in range(1, 200): f(n)
 #
 # print(f(170))
+f = {}
+
+# for n in range(-20,5000):
+#     if n == 1: f[n] == 1
 
