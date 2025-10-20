@@ -127,10 +127,54 @@
 # print(c)
 
 
+# from ipaddress import *
+#
+# for m in range(33):
+#     net1 = ip_network(f'118.187.59.255/{m}', 0)
+#     net2 = ip_network(f'118.187.65.115/{m}', 0)
+#     if net1.network_address != net2.network_address:
+#         print(m)
+
+
+## ПОДБОРКА
+
+# 1 Задача
+# from ipaddress import *
+# list = []
+# for m in range(33):
+#     net1 = ip_network(f'121.171.5.70/{m}', 0)
+#     net2 = ip_network(f'121.171.5.107/{m}', 0)
+#     if net1==net2:
+#         list.append(net1.num_addresses)
+# print(min(list))
+
+# 2 Задача
+# from ipaddress import *
+#
+# for m in range(33):
+#     net = ip_network(f'20.24.110.42/{m}', 0)
+#     if str(net.network_address) == '20.24.96.0':
+#         print(m)
+
+# 3 Задача
+# from ipaddress import *
+#
+# for m in range(33):
+#     net = ip_network(f'174.213.57.95/{m}', 0)
+#     if str(net.network_address) == '174.213.0.0':
+#         if m % 2 == 0:
+#             print(m)
+
+# 4 Задача
+
 from ipaddress import *
 
-for m in range(33):
-    net1 = ip_network(f'118.187.59.255/{m}', 0)
-    net2 = ip_network(f'118.187.65.115/{m}', 0)
-    if net1.network_address != net2.network_address:
-        print(m)
+# 5 задача
+from ipaddress import *
+
+for a in range(256):
+    net = ip_network('248.112.'+str(a)+'.35/255.255.255.240', 0)
+    for ip in net:
+        ip_bin = bin(int(ip))[2:].zfill(32)
+        if ip_bin[:16].count('0') <= ip_bin[-16:].count('1'):
+            print(a)
