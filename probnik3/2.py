@@ -14,4 +14,3 @@
 #             if all(f(**dict(zip(p,l))) == l[-1] for l in t):
 #                 print(*p)
 
-print(1420-454)

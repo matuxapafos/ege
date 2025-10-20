@@ -1,10 +1,23 @@
-for n in range(1,1000):
-    b = bin(n)[2:]
-    if n % 5 == 0:
-        b = b + b[-3:]
-    if n % 5 != 0:
-        a = (n%5) * 59
-        
-        b = b + bin(a)[2:]
-    if int(b,2) > 256:
-        print(n)
+a = int(input().strip())
+b = []
+for _ in range(a):
+    b.append(input().strip())
+
+c = int(input().strip())
+d = []
+for _ in range(c):
+    d.append(input().strip())
+
+e = {}
+for f, g in enumerate(b, 1):
+    # Разбиваем строку на слова и проверяем каждое слово
+    h = g.split()
+    for i in h:
+        # Убираем ВСЕ знаки препинания из слова
+        j = ''.join(char for char in i if char.isalpha())
+        if j and j[0].isupper():
+            if j not in e:
+                e[j] = f
+
+for k in d:
+    print(e.get(k, -1))

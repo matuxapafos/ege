@@ -111,20 +111,46 @@
 #                 c += 1
 # print(c)
 
+# from itertools import *
+# c = 0
+# for x in product('01234567', repeat = 5):
+#     w = ''.join(x)
+#     f = ''
+#     for i in w:
+#         if i == '6':
+#             f += 'g'
+#         elif i in '1357':
+#             f += 'e'
+#         else:
+#             f += 'd'
+#     if w[0] != '0':
+#         if w.count('6') == 1:
+#             if 'ge' not in f and 'eg' not in f:
+#                 c += 1
+# print(c)
+
 from itertools import *
-c = 0
-for x in product('01234567', repeat = 5):
-    w = ''.join(x)
-    f = ''
-    for i in w:
-        if i == '6':
-            f += 'g'
-        elif i in '1357':
-            f += 'e'
-        else:
-            f += 'd'
-    if w[0] != '0':
-        if w.count('6') == 1:
-            if 'ge' not in f and 'eg' not in f:
-                c += 1
-print(c)
+
+k = 0
+
+for x in product('0123456789ABCDEF', repeat = 4):
+
+    x = ''.join(x)
+
+    w = ''
+    res1 = 0
+    res2 = 0
+    if x[0] != '0':
+        for i in x:
+            if x in '02468ACE':
+                w += '*'
+                res1 += int(x, 16)
+            elif x in '13579BDF':
+                w += "!"
+                res2 += int(x, 16)
+        print(x, w, res1, res2)
+#     if w.count("*") == 2 and w.count("!") == 2:
+#       if res1 == res2:
+#         if len(x) == len(set(x)):
+#           k += 1
+# print(k)
